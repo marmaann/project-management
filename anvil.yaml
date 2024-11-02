@@ -1,0 +1,30 @@
+allow_embedding: false
+correct_dependency_ids: {}
+db_schema:
+  passwordtable:
+    client: full
+    columns:
+    - admin_ui: {width: 200}
+      name: UserID
+      type: string
+    - admin_ui: {width: 200}
+      name: Password
+      type: string
+    - admin_ui: {width: 200}
+      name: Name
+      type: string
+    server: full
+    title: PasswordTable
+dependencies: []
+metadata: {}
+name: Clone of Login Demo
+native_deps: {head_html: ''}
+package_name: Project_Management
+renamed: true
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-full, version: 2}
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+startup: {module: Login, type: form}
+startup_form: ChangePassword
