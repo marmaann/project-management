@@ -1,6 +1,20 @@
 allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
+  high_priority_recalls:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Recall
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Recall ID
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      name: Recall Priority
+      type: string
+    server: full
+    title: High Priority Recalls
   passwordtable:
     client: full
     columns:
@@ -17,7 +31,7 @@ db_schema:
     title: PasswordTable
 dependencies: []
 metadata: {}
-name: Clone of Login Demo
+name: LATEST CPSC
 native_deps: {head_html: ''}
 package_name: Project_Management
 renamed: true

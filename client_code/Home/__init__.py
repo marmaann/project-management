@@ -4,6 +4,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from .. import Module1
+from tables import app_tables
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -15,5 +16,14 @@ class Home(HomeTemplate):
 
   def link_1_click(self, **event_args):
    open_form('Logout')
+    
+  def link_3_click(self, **event_args):
+    open_form('HighPriorityRecalls')
+    pass
+
+  def link_4_click(self, **event_args):
+    open_form('ViewRecalls')
+    pass
+
 
 

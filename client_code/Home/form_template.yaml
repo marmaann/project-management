@@ -3,13 +3,23 @@ components:
   - event_bindings: {}
     layout_properties: {grid_position: 'ECJVUT,PURHMO'}
     name: label_1
-    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Log In Demo Home Page, tooltip: '', underline: false, visible: true}
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: CPSC Recall, tooltip: '', underline: false, visible: true}
     type: Label
   - event_bindings: {}
     layout_properties: {grid_position: 'LJQIXT,ECGTZT'}
     name: label_3
     properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 12, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
     type: Label
+  - event_bindings: {click: link_4_click}
+    layout_properties: {grid_position: 'RRKXIA,NLWAAT'}
+    name: link_4
+    properties: {background: '', text: View Recalls}
+    type: Link
+  - event_bindings: {click: link_3_click}
+    layout_properties: {grid_position: 'JTZCWQ,DVKYRW'}
+    name: link_3
+    properties: {text: High Priority Recall}
+    type: Link
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
@@ -27,7 +37,7 @@ components:
 - event_bindings: {}
   layout_properties: {slot: title}
   name: label_2
-  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: log in demo, tooltip: '', underline: false, visible: true}
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: CPSC Recall System, tooltip: '', underline: false, visible: true}
   type: Label
 container:
   event_bindings: {}

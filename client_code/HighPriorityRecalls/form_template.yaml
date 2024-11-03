@@ -1,0 +1,14 @@
+components:
+- components: []
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: rich_text_1
+  properties: {content: High Priority Recalls}
+  type: RichText
+container:
+  properties: {html: '@theme:single-column.html'}
+  type: HtmlTemplate
+is_package: true

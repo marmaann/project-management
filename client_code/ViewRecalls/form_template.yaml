@@ -1,0 +1,15 @@
+components:
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: View Recalls}
+  type: Label
+- event_bindings: {change: drop_down_1_change}
+  layout_properties: {slot: default}
+  name: drop_down_1
+  properties: {}
+  type: DropDown
+container:
+  properties: {html: '@theme:single-column.html'}
+  type: HtmlTemplate
+is_package: true
+item_type: {table_id: 867144}
