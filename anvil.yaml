@@ -2,7 +2,7 @@ allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
   high_priority_recalls:
-    client: none
+    client: full
     columns:
     - admin_ui: {order: 0, width: 200}
       name: Recall

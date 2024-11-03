@@ -16,4 +16,5 @@ unique_ids:
   modules:
     Module1: KQRK5R4GJ5LPVRSBYUPGOMMLZNFWXDEW
   scripts: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1730664937925124165342970.52495'
