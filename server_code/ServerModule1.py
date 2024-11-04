@@ -5,10 +5,17 @@ import anvil.server
 
 @anvil.server.callable
 def get_high_priority_recalls():
-    # Fetch all records with additional data
-    records = app_tables.high_priority_recalls.search()
-    # Return a list of tuples with Recall ID, full record
-    return [(str(record['Recall ID']), record) for record in records]
+    recalls = app_tables.high_priority_recalls.search()
+    # Match the column names exactly
+    return [
+        {
+            "id": recall["Recall ID"],
+            "priority": recall["Recall Priority"],
+            "description": recall["Recall"]
+        }
+        for recall in recalls
+    ]
+
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
