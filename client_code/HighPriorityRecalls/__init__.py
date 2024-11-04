@@ -15,3 +15,20 @@ class HighPriorityRecalls(HighPriorityRecallsTemplate):
             print(f"Data Grid items: {self.data_grid_1.items}")  # Debug statement
         except anvil.server.AnvilError as e:
             alert(f"An error occurred: {str(e)}", title="Error", large=True)
+
+    def button_1_click(self, **event_args):
+        """Delete the selected recall when button is clicked."""
+        selected_item = self.data_grid_1.selected_row  # Get the selected row from Data Grid
+        
+        if selected_item:
+            # Confirm deletion with the user
+            confirm_delete = confirm(f"Are you sure you want to delete the recall '{selected_item['Recall']}'?")
+            
+            if confirm_delete:
+                # Call the server function to delete the recall by its ID
+                anvil.server.call('delete_recall', selected_item['Recall ID'])
+                
+                # Refresh the Data Grid to reflect deletion
+                self.refresh_data_grid()
+        else:
+            alert("Please select a recall to delete.", title="No Selection")

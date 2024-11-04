@@ -1,0 +1,34 @@
+components:
+- data_bindings:
+  - code: |
+      self.item['Recall ID']
+    property: text
+    writeback: false
+  layout_properties: {column: BRZRII}
+  name: label_id
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - code: |
+      self.item['Recall Priority']
+    property: text
+    writeback: false
+  layout_properties: {column: UCDQJO}
+  name: label_priority
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''Recall'']', property: text}
+  layout_properties: {column: PLIHQV}
+  name: label_recall
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+container:
+  properties:
+    html: |-
+      <center style="font-style:italic; color:#888; margin: 3em;">
+        (Insert your custom HTML here)
+      </center>
+      <div anvil-slot="default"></div>
+  type: HtmlTemplate
+is_package: true
