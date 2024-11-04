@@ -8,6 +8,11 @@ components:
         name: label_recall
         properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
         type: Label
+      - event_bindings: {click: button_1_click}
+        layout_properties: {column: PLIHQV, grid_position: 'WKZADK,CYPJJA'}
+        name: button_1
+        properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing: null, spacing_above: none, spacing_below: none, text: button_1, tooltip: '', underline: false, visible: true}
+        type: Button
       - data_bindings:
         - code: |
             self.item['Recall ID']
@@ -52,7 +57,7 @@ components:
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
-  properties: {}
+  properties: {col_widths: '{}'}
   type: ColumnPanel
 container:
   properties: {html: '@theme:single-column.html'}
