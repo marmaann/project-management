@@ -2,37 +2,47 @@ components:
 - components:
   - components:
     - components:
-      - data_bindings: []
-        layout_properties: {column: JKSDUP}
-        name: label_recall_id
-        properties:
-          text: |2+
-
+      - data_bindings:
+        - code: |
+            self.item['Recall']
+          property: text
+          writeback: false
+        layout_properties: {column: PLIHQV}
+        name: label_recall
+        properties: {visible: true}
         type: Label
       - data_bindings:
-        - {code: 'self.item[''Recall Priority'']', property: text, writeback: false}
-        layout_properties: {column: VJQQOR}
+        - code: |
+            self.item['Recall ID']
+          property: text
+          writeback: false
+        - {code: 'self.item['''']', property: tag, writeback: false}
+        layout_properties: {column: BRZRII}
+        name: label_id
+        properties: {visible: true}
+        type: Label
+      - data_bindings:
+        - code: |
+            self.item['Recall Priority']
+          property: text
+          writeback: false
+        layout_properties: {column: UCDQJO}
         name: label_priority
-        properties:
-          text: |2+
-
-        type: Label
-      - data_bindings:
-        - {code: 'self.item['''']', property: text, writeback: false}
-        layout_properties: {column: OJLQEN}
-        name: label_description
-        properties: {text: ''}
+        properties: {visible: true}
         type: Label
       name: data_row_panel_1
       properties: {}
       type: DataRowPanel
-    layout_properties: {grid_position: 'JPBEUH,UZBMFG'}
+    - name: repeating_panel_1
+      properties: {item_template: HighPriorityRecalls.RowTemplate4}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'WKZADK,CVGKSR'}
     name: data_grid_1
     properties:
       columns:
-      - {data_key: column_1, id: JKSDUP, title: Recall ID}
-      - {data_key: column_2, id: VJQQOR, title: Recall Priority}
-      - {data_key: column_3, id: OJLQEN, title: Recall Description}
+      - {data_key: Recall, id: PLIHQV, title: Recall}
+      - {data_key: Recall ID, id: BRZRII, title: Recall ID}
+      - {data_key: Recall Priority, id: UCDQJO, title: Recall Priority}
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
