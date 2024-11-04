@@ -10,7 +10,9 @@ class HighPriorityRecalls(HighPriorityRecallsTemplate):
         # Fetch data from the server when the form loads
         try:
             high_priority_data = anvil.server.call('get_high_priority_products')
-            # Bind the fetched data to the Data Grid's items property
+            print("Fetched data for Data Grid:", high_priority_data)  # Debugging output
+            
+            # Assign fetched data to the Data Grid
             self.data_grid_1.items = high_priority_data
         except anvil.server.AnvilError as e:
             alert(f"An error occurred: {str(e)}", title="Error", large=True)

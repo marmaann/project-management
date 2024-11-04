@@ -32,10 +32,23 @@ components:
     layout_properties: {grid_position: 'WKZADK,CVGKSR'}
     name: data_grid_1
     properties:
+      auto_header: true
+      background: ''
+      border: ''
       columns:
-      - {data_key: Recall, id: PLIHQV, title: Recall}
-      - {data_key: Recall ID, id: BRZRII, title: Recall ID}
-      - {data_key: Recall Priority, id: UCDQJO, title: Recall Priority}
+      - {$$hashKey: 'object:3357', data_key: Recall ID, id: BRZRII, title: Recall ID}
+      - {$$hashKey: 'object:3358', data_key: Recall Priority, id: UCDQJO, title: Recall Priority}
+      - {$$hashKey: 'object:3356', data_key: Recall, id: PLIHQV, title: Recall}
+      foreground: ''
+      margin: null
+      role: null
+      rows_per_page: 20
+      show_page_controls: true
+      spacing_above: medium
+      spacing_below: medium
+      tooltip: ''
+      visible: true
+      wrap_on: never
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
