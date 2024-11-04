@@ -1,5 +1,39 @@
 components:
-- components: []
+- components:
+  - components:
+    - components:
+      - data_bindings: []
+        layout_properties: {column: JKSDUP}
+        name: label_recall_id
+        properties:
+          text: |2+
+
+        type: Label
+      - data_bindings:
+        - {code: 'self.item[''Recall Priority'']', property: text, writeback: false}
+        layout_properties: {column: VJQQOR}
+        name: label_priority
+        properties:
+          text: |2+
+
+        type: Label
+      - data_bindings:
+        - {code: 'self.item['''']', property: text, writeback: false}
+        layout_properties: {column: OJLQEN}
+        name: label_description
+        properties: {text: ''}
+        type: Label
+      name: data_row_panel_1
+      properties: {}
+      type: DataRowPanel
+    layout_properties: {grid_position: 'JPBEUH,UZBMFG'}
+    name: data_grid_1
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: Recall ID}
+      - {data_key: column_2, id: VJQQOR, title: Recall Priority}
+      - {data_key: column_3, id: OJLQEN, title: Recall Description}
+    type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
