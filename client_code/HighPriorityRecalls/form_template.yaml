@@ -3,23 +3,19 @@ components:
   - components:
     - components:
       - data_bindings:
-        - code: |
-            self.item['Recall']
-          property: text
-          writeback: false
+        - {code: 'self.item[''Recall'']', property: text}
         layout_properties: {column: PLIHQV}
         name: label_recall
-        properties: {visible: true}
+        properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
         type: Label
       - data_bindings:
         - code: |
             self.item['Recall ID']
           property: text
           writeback: false
-        - {code: 'self.item['''']', property: tag, writeback: false}
         layout_properties: {column: BRZRII}
         name: label_id
-        properties: {visible: true}
+        properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
         type: Label
       - data_bindings:
         - code: |
@@ -28,14 +24,11 @@ components:
           writeback: false
         layout_properties: {column: UCDQJO}
         name: label_priority
-        properties: {visible: true}
+        properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
         type: Label
       name: data_row_panel_1
-      properties: {}
+      properties: {align: center, auto_display_data: true, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', italic: false, item: null, margin: null, role: null, spacing_above: small, spacing_below: small, tooltip: '', underline: false, visible: true}
       type: DataRowPanel
-    - name: repeating_panel_1
-      properties: {item_template: HighPriorityRecalls.RowTemplate4}
-      type: RepeatingPanel
     layout_properties: {grid_position: 'WKZADK,CVGKSR'}
     name: data_grid_1
     properties:
@@ -48,10 +41,6 @@ components:
   name: content_panel
   properties: {}
   type: ColumnPanel
-- layout_properties: {slot: title}
-  name: rich_text_1
-  properties: {content: High Priority Recalls}
-  type: RichText
 container:
   properties: {html: '@theme:single-column.html'}
   type: HtmlTemplate
