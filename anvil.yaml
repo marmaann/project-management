@@ -1,20 +1,6 @@
 allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
-  high_priority_recalls:
-    client: full
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: Recall
-      type: string
-    - admin_ui: {order: 1, width: 200}
-      name: Recall ID
-      type: number
-    - admin_ui: {order: 2, width: 200}
-      name: Recall Priority
-      type: string
-    server: full
-    title: High Priority Recalls
   passwordtable:
     client: full
     columns:
