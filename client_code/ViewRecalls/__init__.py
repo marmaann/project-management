@@ -25,5 +25,4 @@ class ViewRecalls(ViewRecallsTemplate):
         if selected_record:
             # Display additional information from the selected record
             self.label_priority_level.text = f"Priority Level: {selected_record['Recall Priority']}"
-            self.label_description.text = f"Description: {selected_record['Recall']}"
-            self.label_id.text = f"Recall ID: {selected_record['Recall ID']}"  # if you have a label for the ID
+            self.label_description.text = f"Description: {selected_record['Recall']}" # if you have a label for the ID

@@ -8,12 +8,13 @@ class HighPriorityRecalls(HighPriorityRecallsTemplate):
         self.init_components(**properties)
         
         # Fetch data from the server and assign it to the Repeating Panel
-        try:
-            high_priority_data = anvil.server.call('get_high_priority_products')
-            print(f"Fetched data: {high_priority_data}")  # Debug statement
-            self.repeating_panel_1.items = high_priority_data  # Populate the Repeating Panel
-        except anvil.server.AnvilError as e:
-            alert(f"An error occurred: {str(e)}", title="Error", large=True)
+        high_priority_data = anvil.server.call('get_high_priority_products')
+        self.repeating_panel_1.items = high_priority_data  # Populate the Repeating Panel
+
+    def refresh_data_grid(self):
+        """Refresh the data in the Data Grid."""
+        high_priority_data = anvil.server.call('get_high_priority_products')
+        self.data_grid_1.items = high_priority_data  # Populate Data Grid with updated data
 
     def button_1_click(self, **event_args):
         """Delete the selected recall when button is clicked."""

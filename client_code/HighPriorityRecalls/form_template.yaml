@@ -26,7 +26,7 @@ components:
         name: label_priority
         properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
         type: Label
-      - layout_properties: {}
+      - layout_properties: {column: 'null'}
         name: repeating_panel_1
         properties: {background: '', border: '', foreground: '', item_template: HighPriorityRecallRow, items: null, margin: null, role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
         type: RepeatingPanel

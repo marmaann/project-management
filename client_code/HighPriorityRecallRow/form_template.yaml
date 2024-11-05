@@ -13,7 +13,7 @@ components:
       self.item['Recall Priority']
     property: text
     writeback: false
-  layout_properties: {column: UCDQJO}
+  layout_properties: {slot: default}
   name: label_priority
   properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
   type: Label
@@ -24,11 +24,13 @@ components:
   properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
   type: Label
 container:
+  data_bindings: []
   properties:
     html: |-
       <center style="font-style:italic; color:#888; margin: 3em;">
-        (Insert your custom HTML here)
+
       </center>
       <div anvil-slot="default"></div>
+    visible: true
   type: HtmlTemplate
 is_package: true
